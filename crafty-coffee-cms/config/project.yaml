@@ -1,0 +1,1109 @@
+categoryGroups:
+  e8331de6-f36c-47ca-88ea-58d08765edc9:
+    fieldLayouts:
+      4690bc11-42da-4835-a37e-2102396f331b:
+        tabs:
+          -
+            fields:
+              ef440483-c84f-4039-bdfd-3249561fe9fb:
+                required: false
+                sortOrder: 1
+            name: Styles
+            sortOrder: 1
+    handle: drinkStyles
+    name: 'Drink Styles'
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        hasUrls: true
+        template: styles/_entry
+        uriFormat: 'styles/{slug}'
+    structure:
+      maxLevels: 5
+      uid: 7af3f7b7-0804-4bf7-9c3e-824031b4214b
+commerce:
+  emails:
+    15c70105-1bcc-43cd-8d17-9bc5a125972d:
+      attachPdf: false
+      bcc: ''
+      cc: ''
+      enabled: true
+      name: 'Order Shipped'
+      pdfTemplatePath: ''
+      plainTextTemplatePath: ''
+      recipientType: customer
+      replyTo: ''
+      subject: 'Order Shipped'
+      templatePath: store/_emails/order-shipped
+      to: ''
+    af7c3afa-4d0b-4eb8-b992-6093e03c39a4:
+      attachPdf: false
+      bcc: ''
+      cc: ''
+      enabled: true
+      name: 'Order Confirmation'
+      pdfTemplatePath: ''
+      plainTextTemplatePath: ''
+      recipientType: customer
+      replyTo: sednanref2004@gmail.com
+      subject: 'Your Crafty Coffee Order'
+      templatePath: store/_emails/order-confirmation
+      to: ''
+  gateways:
+    4507af4e-941e-4bb5-9dca-86ed8afb044e:
+      handle: dummy
+      isFrontendEnabled: true
+      name: Dummy
+      paymentType: purchase
+      sortOrder: 99
+      type: craft\commerce\gateways\Dummy
+  orderStatuses:
+    0ac0e473-1906-4656-8884-ff8e3e549257:
+      color: green
+      default: true
+      description: null
+      handle: new
+      name: New
+      sortOrder: 99
+    2003daca-8656-49e6-8249-4bab2dd463e6:
+      color: red
+      default: false
+      description: ''
+      handle: exception
+      name: Exception
+      sortOrder: 99
+    87974037-a1c2-4362-9cb2-7944b45ee579:
+      color: green
+      default: false
+      description: 'Your order is on the way!'
+      emails:
+        15c70105-1bcc-43cd-8d17-9bc5a125972d: 15c70105-1bcc-43cd-8d17-9bc5a125972d
+      handle: shipped
+      name: Shipped
+      sortOrder: 99
+    cccf98d1-d8a1-408f-b149-9852bf373920:
+      color: purple
+      default: false
+      description: 'Your order was packed and ready for shipping'
+      handle: fulfilled
+      name: Fulfilled
+      sortOrder: 99
+    d6da80da-9a4a-4f44-a9e4-fd26964ea0b8:
+      color: orange
+      default: true
+      description: 'Your order was received and is now in progress'
+      emails:
+        af7c3afa-4d0b-4eb8-b992-6093e03c39a4: af7c3afa-4d0b-4eb8-b992-6093e03c39a4
+      handle: processing
+      name: Processing
+      sortOrder: 99
+  productTypes:
+    1b807cbe-160c-44d3-b6e9-d01107898190:
+      descriptionFormat: ''
+      handle: supplies
+      hasDimensions: false
+      hasVariantTitleField: false
+      hasVariants: false
+      name: Supplies
+      productFieldLayouts:
+        af3328a9-78e0-4aca-860c-a8205ff92fde:
+          tabs:
+            -
+              fields:
+                caa384d6-0f41-4c30-a0fc-27b670206f6c:
+                  required: false
+                  sortOrder: 2
+                ef45f037-943f-4863-b03c-dd36f33b5242:
+                  required: false
+                  sortOrder: 1
+              name: 'Product Information'
+              sortOrder: 1
+      siteSettings:
+        b34dff01-1c91-4de4-ab83-84610f1405d7:
+          hasUrls: true
+          template: store/_product
+          uriFormat: 'store/supplies/{slug}'
+      skuFormat: ''
+      titleFormat: '{product.title}'
+      titleLabel: Name
+      variantTitleLabel: Title
+    6fdf4d06-7196-4bcd-8d2a-8829bdf121a6:
+      descriptionFormat: ''
+      handle: clothing
+      hasDimensions: true
+      hasVariantTitleField: false
+      hasVariants: false
+      name: Clothing
+      siteSettings:
+        b34dff01-1c91-4de4-ab83-84610f1405d7:
+          hasUrls: true
+          template: shop/products/_product
+          uriFormat: 'store/products/{slug}'
+      skuFormat: ''
+      titleFormat: '{product.title}'
+      titleLabel: Title
+      variantTitleLabel: Title
+dateModified: 1590075641
+email:
+  fromEmail: sednanref2004@gmail.com
+  fromName: 'Crafty Coffee'
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    password: 4002andes
+    timeout: '10'
+    username: sednanref2004@gmail.com
+  transportType: craft\mail\transportadapters\Gmail
+fieldGroups:
+  173d2dbe-ef54-4b20-87bd-465d808ff2b0:
+    name: Store
+  3b6974a4-9d51-4345-a941-778edfff572f:
+    name: Common
+  5d80f4a5-fb02-449a-8ba7-ebddb8f75a13:
+    name: News
+  9c35720b-c811-4a45-b7b5-b2bc21e04771:
+    name: About
+  db2778d4-77e2-4d2c-bbc5-06e8b1f63667:
+    name: Styles
+  ee4b868b-862a-4514-89bf-c1627b334767:
+    name: Drinks
+  f1955e73-011b-4287-8fd2-2e9156f746c3:
+    name: Recipes
+fields:
+  074c8fde-16e3-4d13-b76d-6aa448a652df:
+    contentColumnType: text
+    fieldGroup: ee4b868b-862a-4514-89bf-c1627b334767
+    handle: introduction
+    instructions: 'Short sentence at top of drink page. '
+    name: Introduction
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  479c8046-8ddf-451a-9c73-c31398b7da01:
+    contentColumnType: string
+    fieldGroup: ee4b868b-862a-4514-89bf-c1627b334767
+    handle: drinkImage
+    instructions: ''
+    name: 'Drink Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a drink image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4d09f665-5d14-4ba3-b0d7-b901a4eae2f0:
+    contentColumnType: string
+    fieldGroup: ee4b868b-862a-4514-89bf-c1627b334767
+    handle: drinkRecipe
+    instructions: ''
+    name: 'Drink Recipe'
+    searchable: true
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Add a drink recipe'
+      source: null
+      sources:
+        - 'section:c828d52a-d271-4b70-89a7-f6865c41ae33'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  54bb063c-5936-4bf3-bc9a-85c89a1219e6:
+    contentColumnType: text
+    fieldGroup: 9c35720b-c811-4a45-b7b5-b2bc21e04771
+    handle: pageIntro
+    instructions: ''
+    name: 'Page Intro'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7df7941d-1e86-4a49-ab03-7ab8719f88b9:
+    contentColumnType: text
+    fieldGroup: 3b6974a4-9d51-4345-a941-778edfff572f
+    handle: excerpt
+    instructions: ''
+    name: Excerpt
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6e1ddbb-d173-474a-9b71-eeb5805708dd:
+    contentColumnType: string
+    fieldGroup: db2778d4-77e2-4d2c-bbc5-06e8b1f63667
+    handle: drinkStyle
+    instructions: ''
+    name: 'Drink Style'
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: 'Add a drink style'
+      source: 'group:e8331de6-f36c-47ca-88ea-58d08765edc9'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  c2802d29-16d2-4e5f-8401-92321167c0e5:
+    contentColumnType: text
+    fieldGroup: ee4b868b-862a-4514-89bf-c1627b334767
+    handle: pageCopy
+    instructions: ''
+    name: 'Page Copy'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  c335386c-416d-422b-ab7d-a6390613287a:
+    contentColumnType: string
+    fieldGroup: f1955e73-011b-4287-8fd2-2e9156f746c3
+    handle: recipeContents
+    instructions: ''
+    name: 'Recipe Contents'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_recipecontents}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  caa384d6-0f41-4c30-a0fc-27b670206f6c:
+    contentColumnType: string
+    fieldGroup: 173d2dbe-ef54-4b20-87bd-465d808ff2b0
+    handle: productImage
+    instructions: ''
+    name: 'Product Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:447b1fe2-e926-41de-a867-b319130b9745'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a product Image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:447b1fe2-e926-41de-a867-b319130b9745'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  dad89190-0d91-462f-88dd-4d1ac49c4f66:
+    contentColumnType: text
+    fieldGroup: 9c35720b-c811-4a45-b7b5-b2bc21e04771
+    handle: subtitle
+    instructions: ''
+    name: Subtitle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e59589de-cf68-450b-9d7c-a57576c03f36:
+    contentColumnType: text
+    fieldGroup: 5d80f4a5-fb02-449a-8ba7-ebddb8f75a13
+    handle: newsBody
+    instructions: ''
+    name: 'News Body'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  ef440483-c84f-4039-bdfd-3249561fe9fb:
+    contentColumnType: text
+    fieldGroup: db2778d4-77e2-4d2c-bbc5-06e8b1f63667
+    handle: styleDescription
+    instructions: ''
+    name: 'Style Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ef45f037-943f-4863-b03c-dd36f33b5242:
+    contentColumnType: string
+    fieldGroup: 173d2dbe-ef54-4b20-87bd-465d808ff2b0
+    handle: productDescription
+    instructions: ''
+    name: 'Product Description'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_productdescription}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+graphql:
+  schemas:
+    b7e76599-2010-4217-a546-937b5d3fa0e7:
+      isPublic: true
+      name: 'Public Schema'
+imageTransforms:
+  16a52ead-2e86-45af-9f3c-698d40f2c8d3:
+    format: null
+    handle: productListing
+    height: 200
+    interlace: none
+    mode: crop
+    name: 'Product Listing '
+    position: center-center
+    quality: null
+    width: 400
+  e3377f7e-711b-46db-8988-88dd06c0b202:
+    format: null
+    handle: EightFortyTwoHundredThumb
+    height: 200
+    interlace: none
+    mode: crop
+    name: '840x200 Thumb'
+    position: center-center
+    quality: null
+    width: 840
+matrixBlockTypes:
+  0e0962e4-e4b0-4083-b63b-9906481a6e0b:
+    field: c335386c-416d-422b-ab7d-a6390613287a
+    fieldLayouts:
+      fa174242-6bd2-46a6-8608-35da9799cc6f:
+        tabs:
+          -
+            fields:
+              b03a2cff-e3e4-4c3a-b6a6-c3e8c781c2ee:
+                required: false
+                sortOrder: 1
+              e2a289f9-4e7a-4b22-b722-afe735c924c2:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      b03a2cff-e3e4-4c3a-b6a6-c3e8c781c2ee:
+        contentColumnType: text
+        fieldGroup: null
+        handle: stepsTitle
+        instructions: ''
+        name: 'Steps Title'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      e2a289f9-4e7a-4b22-b722-afe735c924c2:
+        contentColumnType: text
+        fieldGroup: null
+        handle: stepsContent
+        instructions: ''
+        name: 'Steps Content'
+        searchable: true
+        settings:
+          addRowLabel: 'Add a row'
+          columnType: text
+          columns:
+            __assoc__:
+              -
+                - col1
+                -
+                  __assoc__:
+                    -
+                      - heading
+                      - 'Step Instructions'
+                    -
+                      - handle
+                      - stepInstructions
+                    -
+                      - width
+                      - ''
+                    -
+                      - type
+                      - multiline
+          maxRows: ''
+          minRows: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Table
+    handle: recipeSteps
+    name: 'Recipe Steps'
+    sortOrder: 4
+  17260a44-4415-4ac9-a021-0fb47c72adc6:
+    field: c335386c-416d-422b-ab7d-a6390613287a
+    fieldLayouts:
+      863d3279-5a88-4549-9141-55fe48eaf17b:
+        tabs:
+          -
+            fields:
+              ae1f295a-8164-4b75-b727-e7c2d20e5d02:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      ae1f295a-8164-4b75-b727-e7c2d20e5d02:
+        contentColumnType: text
+        fieldGroup: null
+        handle: ingredients
+        instructions: ''
+        name: Ingredients
+        searchable: true
+        settings:
+          addRowLabel: 'Add a row'
+          columnType: text
+          columns:
+            __assoc__:
+              -
+                - col1
+                -
+                  __assoc__:
+                    -
+                      - heading
+                      - Amount
+                    -
+                      - handle
+                      - amount
+                    -
+                      - width
+                      - ''
+                    -
+                      - type
+                      - singleline
+              -
+                - col2
+                -
+                  __assoc__:
+                    -
+                      - heading
+                      - Ingredient
+                    -
+                      - handle
+                      - ingredient
+                    -
+                      - width
+                      - ''
+                    -
+                      - type
+                      - singleline
+          maxRows: ''
+          minRows: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Table
+    handle: recipeIngredients
+    name: 'Recipe Ingredients'
+    sortOrder: 5
+  2fe8849d-a3b2-4e86-abfd-a4124ea0076c:
+    field: c335386c-416d-422b-ab7d-a6390613287a
+    fieldLayouts:
+      448d9a7a-b76e-42f0-8399-4465b97953db:
+        tabs:
+          -
+            fields:
+              8c86b286-218c-4a63-ba91-14d33ceb7cda:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      8c86b286-218c-4a63-ba91-14d33ceb7cda:
+        contentColumnType: text
+        fieldGroup: null
+        handle: tipContent
+        instructions: ''
+        name: 'Tip Content'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: recipeTip
+    name: 'Recipe Tip'
+    sortOrder: 2
+  51e3646e-111c-4651-ae09-9fd365b33a91:
+    field: c335386c-416d-422b-ab7d-a6390613287a
+    fieldLayouts:
+      e31ae32c-7554-4e56-99a7-05db4b7d4e28:
+        tabs:
+          -
+            fields:
+              fe75e466-7678-407d-ad47-a73ce2ca3bbb:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      fe75e466-7678-407d-ad47-a73ce2ca3bbb:
+        contentColumnType: text
+        fieldGroup: null
+        handle: bodyContent
+        instructions: ''
+        name: 'Body Content'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: recipeCopy
+    name: 'Recipe Copy'
+    sortOrder: 3
+  6773de64-d0f4-42f9-8f27-494a43d620d6:
+    field: ef45f037-943f-4863-b03c-dd36f33b5242
+    fieldLayouts:
+      06d198e1-8171-4a75-9115-b5b3560923b5:
+        tabs:
+          -
+            fields:
+              0622cae0-83b9-40b3-8cf1-e42807c5c589:
+                required: false
+                sortOrder: 2
+              73587515-8631-4718-9999-87121c656cc1:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      0622cae0-83b9-40b3-8cf1-e42807c5c589:
+        contentColumnType: text
+        fieldGroup: null
+        handle: caption
+        instructions: ''
+        name: Caption
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      73587515-8631-4718-9999-87121c656cc1:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:447b1fe2-e926-41de-a867-b319130b9745'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Add product Image'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:447b1fe2-e926-41de-a867-b319130b9745'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: productImage
+    name: 'Product Image'
+    sortOrder: 2
+  7a6b9645-7e13-42b2-9f4b-bb57b9d02979:
+    field: ef45f037-943f-4863-b03c-dd36f33b5242
+    fieldLayouts:
+      72d54777-3959-4ed3-bb31-07e528894163:
+        tabs:
+          -
+            fields:
+              c4e04e70-900e-4883-9a9a-d6d1e8e77354:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      c4e04e70-900e-4883-9a9a-d6d1e8e77354:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: descriptionCopy
+    name: 'Description Copy'
+    sortOrder: 1
+  f78bfaa9-e525-4b4a-9897-ce5058310dcc:
+    field: c335386c-416d-422b-ab7d-a6390613287a
+    fieldLayouts:
+      fe12124a-6141-4fcf-8175-58ad302d26ad:
+        tabs:
+          -
+            fields:
+              1a5780ca-d8db-4b31-8c76-c8d74fa795f2:
+                required: false
+                sortOrder: 2
+              4bb837ed-696a-465c-ae5e-a52ed850b2e3:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      1a5780ca-d8db-4b31-8c76-c8d74fa795f2:
+        contentColumnType: text
+        fieldGroup: null
+        handle: imageCaption
+        instructions: ''
+        name: 'Image Caption'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      4bb837ed-696a-465c-ae5e-a52ed850b2e3:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:679feb39-d56f-43cf-9b9a-5c4009fa2324'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: recipeImage
+    name: 'Recipe Image'
+    sortOrder: 1
+plugins:
+  command-palette:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  commerce:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.1.11
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
+  logs:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.8
+sections:
+  13a49d3a-74d9-445a-9814-75a615b1b2b2:
+    enableVersioning: true
+    entryTypes:
+      06203c16-55ba-4810-8681-c9389a09d511:
+        fieldLayouts:
+          3dc744db-5229-4d1e-a804-d45dd0e54ac2:
+            tabs:
+              -
+                fields:
+                  074c8fde-16e3-4d13-b76d-6aa448a652df:
+                    required: false
+                    sortOrder: 2
+                  479c8046-8ddf-451a-9c73-c31398b7da01:
+                    required: false
+                    sortOrder: 4
+                  4d09f665-5d14-4ba3-b0d7-b901a4eae2f0:
+                    required: false
+                    sortOrder: 5
+                  a6e1ddbb-d173-474a-9b71-eeb5805708dd:
+                    required: false
+                    sortOrder: 1
+                  c2802d29-16d2-4e5f-8401-92321167c0e5:
+                    required: false
+                    sortOrder: 3
+                name: 'Drink Details'
+                sortOrder: 1
+        handle: drinks
+        hasTitleField: true
+        name: Drinks
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Drink Name'
+    handle: drinks
+    name: Drinks
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        enabledByDefault: true
+        hasUrls: true
+        template: drinks/_entry
+        uriFormat: 'drinks/{slug}'
+    type: channel
+  354b2ad6-6ee8-4ad8-a988-713dc66ba2aa:
+    enableVersioning: true
+    entryTypes:
+      d70d6cbe-3a4a-4e56-9b2e-805217072249:
+        fieldLayouts:
+          13e21443-f0f4-47e1-8740-561f0db55bbf:
+            tabs:
+              -
+                fields:
+                  dad89190-0d91-462f-88dd-4d1ac49c4f66:
+                    required: false
+                    sortOrder: 1
+                name: Common
+                sortOrder: 1
+        handle: homepage
+        hasTitleField: true
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: 'Homepage Title'
+    handle: homepage
+    name: Homepage
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+    type: single
+  c828d52a-d271-4b70-89a7-f6865c41ae33:
+    enableVersioning: true
+    entryTypes:
+      1f0fb227-518c-43e2-a942-e265b4418f0a:
+        fieldLayouts:
+          25f35663-03e9-4789-9528-ae9907d6dc3e:
+            tabs:
+              -
+                fields:
+                  a6e1ddbb-d173-474a-9b71-eeb5805708dd:
+                    required: false
+                    sortOrder: 1
+                  c335386c-416d-422b-ab7d-a6390613287a:
+                    required: false
+                    sortOrder: 2
+                name: Recipes
+                sortOrder: 1
+        handle: recipes
+        hasTitleField: true
+        name: Recipes
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Recipe Name'
+    handle: recipes
+    name: Recipes
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        enabledByDefault: true
+        hasUrls: true
+        template: recipes/_entry
+        uriFormat: 'recipes/{slug}'
+    type: channel
+  da63c6af-f55a-4348-95a8-fd5d294a0125:
+    enableVersioning: true
+    entryTypes:
+      1dfcc1f2-1d87-4993-9e6f-67bcc0ad89ad:
+        fieldLayouts:
+          1ab7b24d-0a91-4780-8ceb-75f755842588:
+            tabs:
+              -
+                fields:
+                  54bb063c-5936-4bf3-bc9a-85c89a1219e6:
+                    required: false
+                    sortOrder: 2
+                  c2802d29-16d2-4e5f-8401-92321167c0e5:
+                    required: true
+                    sortOrder: 3
+                  dad89190-0d91-462f-88dd-4d1ac49c4f66:
+                    required: false
+                    sortOrder: 1
+                name: About
+                sortOrder: 1
+        handle: aboutCraftyCoffee
+        hasTitleField: true
+        name: 'About Crafty Coffee'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Page Title'
+    handle: aboutCraftyCoffee
+    name: 'About Crafty Coffee'
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        enabledByDefault: true
+        hasUrls: true
+        template: about/_entry
+        uriFormat: '{parent.uri}/{slug}'
+    structure:
+      maxLevels: null
+      uid: e5368fac-d7e4-4660-a5f6-2f726467f4d5
+    type: structure
+  e6acd7d8-4560-486d-a427-0d4692807508:
+    enableVersioning: true
+    entryTypes:
+      f6651859-32f7-4145-8c38-20b0580af233:
+        fieldLayouts:
+          54fc7844-58dc-4302-b462-8c78f299b5aa:
+            tabs:
+              -
+                fields:
+                  7df7941d-1e86-4a49-ab03-7ab8719f88b9:
+                    required: false
+                    sortOrder: 1
+                  e59589de-cf68-450b-9d7c-a57576c03f36:
+                    required: false
+                    sortOrder: 2
+                name: News
+                sortOrder: 1
+        handle: news
+        hasTitleField: true
+        name: News
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Headline
+    handle: news
+    name: News
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      b34dff01-1c91-4de4-ab83-84610f1405d7:
+        enabledByDefault: true
+        hasUrls: true
+        template: news/_entry
+        uriFormat: 'news/{slug}'
+    type: channel
+siteGroups:
+  7675e13b-31b4-40d1-8025-a37fd35fb97f:
+    name: 'Crafty Coffee'
+sites:
+  b34dff01-1c91-4de4-ab83-84610f1405d7:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Crafty Coffee'
+    primary: true
+    siteGroup: 7675e13b-31b4-40d1-8025-a37fd35fb97f
+    sortOrder: 1
+system:
+  edition: pro
+  live: true
+  name: 'Crafty Coffee'
+  schemaVersion: 3.4.9
+  timeZone: America/Chicago
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  447b1fe2-e926-41de-a867-b319130b9745:
+    handle: supplies
+    hasUrls: true
+    name: Supplies
+    settings:
+      path: '@webroot/images/products/supplies'
+    sortOrder: 2
+    type: craft\volumes\Local
+    url: '@web/images/products/supplies'
+  679feb39-d56f-43cf-9b9a-5c4009fa2324:
+    handle: drinks
+    hasUrls: true
+    name: Drinks
+    settings:
+      path: '@webroot/images/uploads/drinks'
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@web/images/uploads/drinks'
