@@ -31,7 +31,7 @@ you can create emails with templates from there
 and then in the panel control view for an order, you can send the emails.
 
 make sure you have the correct email settings in 
-Settings->email (in my case I used Gmail as transport type), also you have to allow other "insecure" apps to have access to your account, to do so go to you "manage google account"->security and activate it.
+Settings->email (in my case I used Gmail as transport type), to allow this you have to allow other "insecure" apps to have access to your google account, to do so go to you "manage google account"->security and activate it, it is recommended to use it only when testing this feature and then restrict the access to your google account once you are done!
 
 To send based on certain actions:
 
@@ -42,7 +42,6 @@ PROMOTIONS
 Commerce -> promotions
 
 You have:
-
 	Discounts & Sales
 
 Sales are promotions applied to products before they are added to the cart, Discounts are discounts depending on some actions like coupons!
