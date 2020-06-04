@@ -53,3 +53,19 @@ There are 3 different types of configurable taxes in craft:
 - Tax Rates
 - Tax Categories
 - Tax Zones: can be scoped on countries, states (US) or ZIP Codes.
+
+
+==================
+    PLUGINS
+==================
+
+* In order to create a new plugin, create a new folder plugins and inside of it create the plugin "craft-plugin-name"
+'craft-' is only by convention, then you create the composer.json of the plugin and add it in the repositories of the
+project's composer.json.
+* then you can do `composer require <plugin-name>` (plugin name is sednanref/user-guide in this example)
+* for the icons you just need an icon.svg and an icon-mask.svg in the src folder of your plugin.
+
+There is a great video about how to be more efficient using phpStorm called
+Be Awesome in PhpStorm from Laracast
+
+there is a nice repo on github craftcms/phpstorm-settings
