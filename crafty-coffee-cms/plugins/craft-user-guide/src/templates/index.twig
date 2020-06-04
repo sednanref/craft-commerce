@@ -1,0 +1,101 @@
+{% extends '_layouts/cp' %}
+
+{% import '_includes/forms' as forms %}
+
+{%  set title = 'User Guide' %}
+
+{% set sidebar = '<ul>
+                    <li><a href="#intro">Intro sidebar<a></li>
+                    <li><a href="#fields">Fields</a></li>
+                    <li><a href="https://google.com">Google</a></li>
+                  </ul>' %}
+{% set toolbar = 'Intro Toolbar' %}
+
+{% block content %}
+
+    <div id="intro">
+        {% set markdownText = craft.app.plugins.getPlugin('user-guide').settings.markdownText %}
+        {{ markdownText|markdown }}
+        <p><em>SETTINGS</em></p>
+    </div>
+
+
+    {#  for more fields and customization, there is a plugin!
+        !!! CP Style Guide !!!
+     #}
+    <div id="fields">
+        <form type="POST" action="">
+            {{ csrfInput() }}
+
+            {{ forms.hidden({
+                name: 'action',
+                value: 'user-guide/feedback/send'
+            }) }}
+
+            {{ forms.textField({
+                label: 'Subject',
+                name: 'subject',
+                value: '',
+                instructions: 'Enter your text here',
+                required: true
+            }) }}
+
+            {#    forms.dateField({ #}
+            {#            label: 'Date Field',#}
+            {#            name: 'date',#}
+            {#            value: '',#}
+            {#            instructions: 'Enter your date here'#}
+            {#        }) }}#}
+
+            {#        {{ forms.colorField({#}
+            {#            label: 'Color Field',#}
+            {#            name: 'color',#}
+            {#            value: '',#}
+            {#            instructions: 'Enter your color here'#}
+            {#        }) }}#}
+
+            {{ forms.selectField({
+                label: 'Topic',
+                name: 'topic',
+                value: '',
+                options: {
+                    question: 'Question',
+                    feedback: 'Feedback'
+                },
+                instructions: 'Select an topic here'
+            }) }}
+
+            {{ forms.textareaField({
+                label: 'Message',
+                name: 'message',
+                value: '',
+                instructions: 'Enter a message here',
+                rows: 5,
+                required: true
+            }) }}
+            <input type="submit" class="submit btn" value="Send"/>
+        </form>
+    </div>
+
+
+    {#    This section worked on craft 2 with the tabs in the cp layouts...
+        now it is like this: https://github.com/craftcms/cms/issues/2326
+    #}
+{#    <div id="fields", class="hidden">#}
+{#        {{ forms.textField({#}
+{#            label: 'Text Field',#}
+{#            name: 'text',#}
+{#            value: 'dummy text',#}
+{#            instructions: 'Enter your text here'#}
+{#        }) }}#}
+
+{#        {{ forms.dateField({#}
+{#            label: 'Date Field',#}
+{#            name: 'date',#}
+{#            value: '',#}
+{#            instructions: 'Enter your date here'#}
+{#        }) }}#}
+{#    </div>#}
+
+
+{% endblock %}

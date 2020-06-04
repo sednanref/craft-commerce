@@ -1,0 +1,30 @@
+{% import '_includes/forms' as forms %}
+
+
+{# Find all forms in the includes in the
+    forms.html file in craft cms vendor #}
+
+{{
+    forms.lightswitchField({
+        label: 'User Guide Enabled',
+        name: 'userGuideEnabled',
+        on: settings.userGuideEnabled
+    })
+}}
+
+{{ forms.textField({
+    type: 'email',
+    label:  'Notification Email',
+    instructions: 'The email address to send notifications to.',
+    name: 'notificationEmail',
+    value: settings.notificationEmail
+}) }}
+
+{{ forms.textareaField({
+    label:  'Markdown Text',
+    instructions: 'The content for the user guide.',
+    name: 'markdownText',
+    value: settings.markdownText,
+    first: true,
+    rows: 15
+}) }}

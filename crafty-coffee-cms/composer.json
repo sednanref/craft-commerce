@@ -7,6 +7,7 @@
     "craftcms/redactor": "2.5.0",
     "ether/logs": "3.0.3",
     "nystudio107/craft-seomatic": "3.2.41",
+    "sednanref/craft-user-guide": "^1.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {
@@ -25,5 +26,9 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
-  }
+  },
+  "repositories": [{
+    "type": "path",
+    "url": "./plugins/*"
+  }]
 }

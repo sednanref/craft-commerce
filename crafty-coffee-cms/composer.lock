@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a0079e3e50a13e165f8463710663466",
+    "content-hash": "07a82a6ab7b151fcf97e0a6845ff10ee",
     "packages": [
         {
             "name": "am-impact/amcommand",
@@ -68,46 +68,6 @@
                 "plugin"
             ],
             "time": "2018-05-30T07:07:23+00:00"
-        },
-        {
-            "name": "bertoost/craft-ssmtpmailer",
-            "version": "1.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bertoost/Craft-3-sSMTPMailer/zipball/9af0865db9389629bad8c1102e428f6cf3a91a61",
-                "reference": "9af0865db9389629bad8c1102e428f6cf3a91a61",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.24"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "sSMTP Mailer",
-                "handle": "ssmtpmailer",
-                "developer": "Bert Oost",
-                "developerUrl": "https://bertoost.com",
-                "documentationUrl": "https://github.com/bertoost/Craft-3-sSMTPMailer/blob/master/README.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "bertoost\\ssmtpmailer\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Craft 3 CMS plugin for adding the sSMTP mailer (sendmail replacement).",
-            "homepage": "https://github.com/bertoost/Craft-3-sSMTPMailer",
-            "keywords": [
-                "craft",
-                "craftcms",
-                "craftcms plugin",
-                "mailer",
-                "plugin",
-                "ssmtp"
-            ],
-            "time": "2018-09-18T11:20:18+00:00"
         },
         {
             "name": "cakephp/core",
@@ -3364,6 +3324,47 @@
                 "stylesheet"
             ],
             "time": "2019-02-22T07:42:52+00:00"
+        },
+        {
+            "name": "sednanref/craft-user-guide",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./plugins/craft-user-guide",
+                "reference": "f69a66a4237c52bef0ea92bfd5745c961cb81e6c",
+                "shasum": null
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "User Guide",
+                "handle": "user-guide"
+            },
+            "autoload": {
+                "psr-4": {
+                    "sednanref\\userguide\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luis Fernandes",
+                    "homepage": "https://github.com/sednanref"
+                }
+            ],
+            "description": "User guide for the CMS.",
+            "keywords": [
+                "here",
+                "keywords",
+                "some"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "seld/cli-prompt",
