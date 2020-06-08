@@ -69,3 +69,99 @@ There is a great video about how to be more efficient using phpStorm called
 Be Awesome in PhpStorm from Laracast
 
 there is a nice repo on github craftcms/phpstorm-settings
+
+==============
+DYNAMIC ROUTES
+==============
+
+Specified in CP.
+Map a URI to a specific template but without naming convention
+Great for date-based archives pages.
+====
+TWIG
+====
+* loops in twig:
+
+loop.first -> true if it is the first iteration
+loop.index
+loop.index0
+loop.revindex
+loop.last -> true if it is the last iteration
+loop.length -> gives the total number of iterations in the loop
+
+multiple assignment is possible
+{% set a, b, c = 'a', 'b', 'c' %}
+
+also possible to create formatted text as variable:
+{% set description_formatted %}
+    <p class="description" style="color: red;"> Learn more abour Crafty Coffee and our company and people.</p>
+{% endset %}
+{{ description_formatted }}
+
+* Extend templates always relative to the templates folder:
+    {% extends '_layouts/main' %}
+
+    {% block content %}
+        some overwrite of the main base template in the block "content"
+    {% endblock %}
+
+* when you don't define a block in your child template, it will take whatever is inside
+  of the base template in the defined block.
+* you can also use the parent's block and add stuff to it like:
+    {% block title %}
+        {{ parent() | some awesome subtitle }}
+    {% endblock %}
+
+Sharing templates:
+
+Includes Tags!
+{% include '_inc/sidebar' %}
+
+Embed Tags are kind of an hybrid of extends and include:
+{% embed "social"%}
+    {% block title %} We're Socially Distancing {% endblock %}
+{% endembed %}
+
+where "social" is a template with a title block.
+
+Filters:
+
+Allow you to alter the content that you want to add in your template.
+
+{{ variable | filter }}
+-
+{{ pageTitle | title }} -> title case
+{{ pageTitle | trim }} -> trim the string
+{{ pageTitle | trim('.') }} -> trim all the points
+{{ pageTitle | trim('.') | title }} -> trims and title case.
+
+MACROS:
+
+create:
+{% macro macroName(arg1, arg2) %}
+    {# contents of macro here #}
+{% endmacro %}
+
+
+{% macro socialList(networks, className) %}
+    <ul {% if className %} class="{{ className }}"{%endif%}>
+    {% for network in networks %}
+        <li class="{{network.name | lower }}"><a href="{{ network.url }}">
+            {{ network.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+-----
+Import and use:
+
+{% set networks = {
+    twitter: { name: "Twitter", url: "https://twitter.com" },
+    facebook: { name: "Facebook", url: "https://facebook.com" },
+    instagram: { name: "Instagram", url: "https://instagram.com" }
+    }
+%}
+
+{% import '_macros/socialList' as socialList %}
+
+{{ socialList.socialList(networks, 'coffee') }}
