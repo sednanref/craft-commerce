@@ -165,3 +165,20 @@ Import and use:
 {% import '_macros/socialList' as socialList %}
 
 {{ socialList.socialList(networks, 'coffee') }}
+
+===============
+MORE ON PLUGINS
+===============
+Visualization:
+https://github.com/putyourlightson/craft-plugin-visualisation (followed branch course-in-depth)
+Plugin example:
+https://github.com/putyourlightson/craft-entry-count
+
+- Always register services in the plugin File!
+- It's also a good practice to register variables there (init)
+
+Way to use it in a controller (example):
+EntryCount::$plugin->entryCount->resetAll()
+            plugin - service - method
+
+
