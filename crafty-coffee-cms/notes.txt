@@ -182,3 +182,13 @@ EntryCount::$plugin->entryCount->resetAll()
             plugin - service - method
 
 
+=============
+SUBSCRIPTIONS
+=============
+
+Ultrahook provides local webhooks so that you can test your apis (stripe also for instance)
+
+* For the description of a subscription plan is it good to create a new section
+* then create the fields for it and assign it to the section
+* Then create the entries
+* Associate the subscription plans you create from Commerce Settings

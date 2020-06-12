@@ -1,0 +1,84 @@
+{% extends "_layouts/main" %}
+{# if logged out, forward to plans page #}
+{% if not currentUser %}
+    {% redirect('coffee-club/plans') %}
+{% endif %}
+{% block main %}
+    <div class="full-bleed-header"
+         style="background-size: 100%; height: 200px; background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/coffee-shop.jpg); background-repeat: no-repeat, repeat;">
+        <div class="page-title text-center">
+            <h2 class="logo"><span class="scripty">Coffee Club</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="intro">
+            <div class="large-12 small-12 columns">
+                <div class="large-6 small-12 columns">
+                    <p>
+                        {% if currentUser %}
+                            <a href="{{ url('store/customer') }}"
+                               class="button small radius secondary">{{ "My Orders"|t }}</a>
+                            <a href="{{ url('store/customer/addresses') }}"
+                               class="button small radius secondary">{{ "My Addresses"|t }}</a>
+                            <a href="{{ logoutUrl }}" class="button small radius secondary">Logout</a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h1>Your Club Subscription</h1>
+        <p>Your Coffee Club subscription is active and you should be receivng your coffee beans in the mail.</p>
+    </div>
+
+    {% set subscriptions = craft.subscriptions.user(currentUser).status('active').all() %}
+    {% if not subscriptions %}
+        {% redirect('coffee-club/plans') %}
+    {% endif %}
+    <div class="row">
+        <table class="hover">
+            <tr>
+                <th width="400">Subscription Plan</th>
+                <th>Next Billing Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            {% for subscription in subscriptions %}
+            <tr>
+                <td>{{ subscription.name }}</td>
+                <td>{{ subscription.nextPaymentDate | date('M d, Y') }}</td>
+                <td>{{ subscription.getNextPaymentAmount }}</td>
+                <td>{{ subscription.status | capitalize }}</td>
+                <td>
+                    {% if subscription.canReactivate() %}
+                        <form method="post">
+                            <input type="hidden" name="action" value="commerce/subscriptions/reactivate">
+                            <input type="hidden" name="subscriptionUid" value="{{ subscription.uid | hash }}">
+                            {{ csrfInput() }}
+                            <button type="submit" class="button tiny center">Reactivate</button>
+
+                        </form>
+                    {% else %}
+                    <form method="post">
+                        {{ csrfInput() }}
+                        <input type="hidden" name="action" value="commerce/subscriptions/cancel">
+                        <input type="hidden" name="subscriptionUid" value="{{ subscription.uid | hash }}">
+                        {{ redirectInput('coffee-club') }}
+                        {# the value with the :0 is because it is a hacked way to use the cancel on period end
+                            from the cancel subscription form from the gateway #}
+                        <input type="hidden" name="cancelOnPeriodEnd" value="{{ subscription.uid | hash }}:0">
+                        <p>Cancels at the end of your current billing period.</p>
+                        {# this is a default form, it provides inmediate cancelation! #}
+                        {# {{ subscription.plan.getGateway().getCancelSubscriptionFormHtml(subscription) | raw }}#}
+                        <button class="button radius tiny">Cancel Subscription</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
